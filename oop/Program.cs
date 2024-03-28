@@ -1,5 +1,5 @@
 ﻿using Errors;
-using SuperConsole;
+using SharpConsole;
 
 IO io = IO.Instance;
 

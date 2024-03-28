@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\utilities\SuperConsole\SuperConsole.csproj" />
+    <ProjectReference Include="..\sharp-console\SharpConsole.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
