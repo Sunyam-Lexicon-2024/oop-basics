@@ -2,20 +2,31 @@ using System.Diagnostics.CodeAnalysis;
 
 internal class Person
 {
-
     private int age;
     private string fName;
     private string lName;
 
     [SetsRequiredMembers]
-    internal Person(int age, string fName, string lName)
+    internal Person(int age, string? fName, string? lName)
     {
+        if(fName is null) {
+            throw new ArgumentException("fName cannot be null");
+        }
+        if(lName is null) {
+            throw new ArgumentException("lName cannot be null");
+        }
         (Age, FName, LName) = (age, fName, lName);
     }
 
     [SetsRequiredMembers]
-    internal Person(int age, string fName, string lName, double? height, double? weight) : this(age, fName, lName)
+    internal Person(int age, string? fName, string? lName, double? height, double? weight) : this(age, fName, lName)
     {
+        if(fName is null) {
+            throw new ArgumentException("fName cannot be null");
+        }
+        if(lName is null) {
+            throw new ArgumentException("lName cannot be null");
+        }
         (Height, Weight) = (height, weight);
     }
 
